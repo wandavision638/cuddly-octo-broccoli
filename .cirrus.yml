@@ -1,0 +1,15 @@
+task:
+  name: Build
+  timeout_in: 2h
+  stateful: true
+  container:
+    image: ubuntu:latest
+    cpu: 4
+    memory: 16GB
+
+
+
+  Setup_script:
+    - set +e -xv
+    - echo "start=$(date +%s)" >> "$CIRRUS_ENV"
+  
